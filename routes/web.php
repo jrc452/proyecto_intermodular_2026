@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ReservaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +18,9 @@ Route::get('/admin/eventos', [AdminController::class, 'eventos'])
 
 Route::put('/admin/reserva/{id}/estado', [AdminController::class, 'actualizarEstado'])
     ->name('admin.reserva.estado');
+
+/*return redirect()
+    ->route('reservas.confirmacion', $reserva->id);*/
+
+Route::get('/reservas/{id}/confirmacion', [ReservaController::class, 'confirmacion'])
+    ->name('reservas.confirmacion');

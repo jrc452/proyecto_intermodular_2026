@@ -1,0 +1,17 @@
+.alert {
+    padding: 12px 16px;
+    border-radius: $radius;
+    margin-bottom: 16px;
+    font-weight: 500;
+    @include fade-in;
+
+    &-success {
+        background: rgba(46, 204, 113, 0.15);
+        color: $success;
+    }
+
+    &-error {
+        background: rgba(231, 76, 60, 0.15);
+        color: $danger;
+    }
+}

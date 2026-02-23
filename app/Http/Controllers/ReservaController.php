@@ -7,6 +7,7 @@ use App\Models\Horario;
 use App\Models\Reserva;
 use App\Models\Servicio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservaController extends Controller
 {
@@ -56,5 +57,24 @@ class ReservaController extends Controller
             }
         }
         return response()->json($disponibles);
+    }
+
+    public function store(Request $request)
+    {
+        $reserva = Reserva::create([
+            'user_id' => Auth::id(),
+            'empleado_id' => $request->empleado_id,
+            'servicio_id' => $request->servicio_id,
+            'fecha' => $request->fecha,
+            'hora' => $request->hora,
+            'estado' => 'pendiente'
+        ]);
+        return view('reservas.confirmacion', compact('reserva'));
+    }
+
+    public function confirmacion($id)
+    {
+        $reserva = Reserva::findOrFail($id);
+        return view('reservas.confirmacion', compact('reserva'));
     }
 }

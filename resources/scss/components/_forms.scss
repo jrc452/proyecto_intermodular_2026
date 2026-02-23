@@ -1,0 +1,34 @@
+.form-group {
+    margin-bottom: $spacing-md;
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        border-radius: $radius;
+        border: 1px solid #ddd;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: $primary;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.1);
+        }
+
+        @include smooth;
+
+        &:hover {
+            border-color: $primary-light;
+        }
+
+        &:focus {
+            transform: scale(1.02);
+        }
+    }
+}

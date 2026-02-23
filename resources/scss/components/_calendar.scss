@@ -1,0 +1,21 @@
+.fc {
+    background: $bg-card;
+    padding: $spacing-md;
+    border-radius: $radius;
+    box-shadow: $shadow-soft;
+}
+
+.fc-event {
+    background-color: $primary;
+    border: none;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.fc-event.confirmada {
+    background-color: $success;
+}
+
+.fc-event.cancelada {
+    background-color: $danger;
+}
