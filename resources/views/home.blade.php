@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>EstilizaCitas</title>
-    @vite(['resources/js/app.js'])
+    <title>EstilizaCitas</title>    
+    @vite(['resources/sacs/app.sass', 'resources/js/app.js'])
 </head>
 
 <body>
