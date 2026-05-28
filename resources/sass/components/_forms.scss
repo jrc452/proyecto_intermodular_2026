@@ -1,5 +1,8 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .form-group {
-    margin-bottom: $spacing-md;
+    margin-bottom: variables.$spacing-md;
 
     label {
         display: block;
@@ -11,20 +14,20 @@
     select {
         width: 100%;
         padding: 10px;
-        border-radius: $radius;
+        border-radius: variables.$radius;
         border: 1px solid #ddd;
         transition: 0.3s;
 
         &:focus {
-            border-color: $primary;
+            border-color: variables.$primary;
             outline: none;
             box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.1);
         }
 
-        @include smooth;
+        @include mixins.smooth;
 
         &:hover {
-            border-color: $primary-light;
+            border-color: variables.$primary-light;
         }
 
         &:focus {

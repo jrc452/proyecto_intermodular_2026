@@ -1,0 +1,19 @@
+@use "../abstracts/variables";
+
+body {
+    font-family: variables.$font-main;
+    background-color: variables.$bg-main;
+    color: variables.$text-dark;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    margin-bottom: variables.$spacing-md;
+}
+
+main {
+    animation: fadeIn 0.4s ease;
+}

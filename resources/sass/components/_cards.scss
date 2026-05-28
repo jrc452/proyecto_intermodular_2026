@@ -1,0 +1,23 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.card {
+    background: variables.$bg-card;
+    padding: variables.$spacing-lg;
+    border-radius: variables.$radius;
+    box-shadow: variables.$shadow-soft;
+    margin-bottom: variables.$spacing-lg;
+
+    &-header {
+        font-weight: 600;
+        margin-bottom: variables.$spacing-md;
+    }
+
+    @include mixins.fade-in;
+    @include mixins.smooth;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+}

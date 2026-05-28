@@ -1,31 +1,3 @@
-// 🎨 Colores principales
-$primary: #8e44ad;
-$primary-light: #a569bd;
-$secondary: #f8f9fa;
-$accent: #ff6b81;
-$success: #2ecc71;
-$danger: #e74c3c;
-$text-dark: #2c3e50;
-$text-light: #ffffff;
-
-// 🌈 Fondo
-$bg-main: #f4f6f9;
-$bg-card: #ffffff;
-
-// 📐 Espaciado
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 32px;
-
-// 🔤 Tipografía
-$font-main: 'Poppins', sans-serif;
-
-// 🟢 Bordes
-$radius: 12px;
-
-// 🌑 Sombras
-$shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
-
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
 
@@ -50,12 +22,12 @@ $shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
         flex: 1;
         text-align: center;
         padding: 10px;
-        border-radius: $radius;
+        border-radius: variables.$radius;
         background: #eee;
-        @include smooth;
+        @include mixins.smooth;
 
         &.active {
-            background: $primary;
+            background: variables.$primary;
             color: white;
             transform: scale(1.05);
         }
@@ -64,7 +36,7 @@ $shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 
 .loader {
     border: 4px solid #f3f3f3;
-    border-top: 4px solid $primary;
+    border-top: 4px solid variables.$primary;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -79,7 +51,7 @@ $shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .fc-event {
-    @include smooth;
+    @include mixins.smooth;
 
     &:hover {
         transform: scale(1.03);

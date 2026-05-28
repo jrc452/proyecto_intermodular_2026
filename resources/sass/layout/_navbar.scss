@@ -1,6 +1,8 @@
+@use "../abstracts/variables";
+
 .navbar {
-    background: $primary;
-    padding: $spacing-md;
+    background: variables.$primary;
+    padding: variables.$spacing-md;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +11,7 @@
     a {
         color: white;
         text-decoration: none;
-        margin-left: $spacing-md;
+        margin-left: variables.$spacing-md;
 
         &:hover {
             opacity: 0.8;

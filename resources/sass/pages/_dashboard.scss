@@ -1,0 +1,18 @@
+@use "../abstracts/variables";
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: variables.$spacing-lg;
+
+    .sidebar {
+        background: variables.$bg-card;
+        padding: variables.$spacing-lg;
+        border-radius: variables.$radius;
+        box-shadow: variables.$shadow-soft;
+    }
+
+    .content {
+        background: transparent;
+    }
+}

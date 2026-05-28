@@ -1,0 +1,23 @@
+@use "../abstracts/variables";
+
+.fc {
+    background: variables.$bg-card;
+    padding: variables.$spacing-md;
+    border-radius: variables.$radius;
+    box-shadow: variables.$shadow-soft;
+}
+
+.fc-event {
+    background-color: variables.$primary;
+    border: none;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.fc-event.confirmada {
+    background-color: variables.$success;
+}
+
+.fc-event.cancelada {
+    background-color: variables.$danger;
+}

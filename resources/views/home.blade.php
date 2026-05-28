@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>EstilizaCitas</title>    
-    @vite(['resources/sacs/app.sass', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>

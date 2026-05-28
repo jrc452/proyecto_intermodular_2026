@@ -1,6 +1,9 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .btn {
     padding: 10px 18px;
-    border-radius: $radius;
+    border-radius: variables.$radius;
     border: none;
     cursor: pointer;
     font-weight: 500;
@@ -9,17 +12,17 @@
     display: inline-block;
 
     &-primary {
-        background: $primary;
-        color: $text-light;
+        background: variables.$primary;
+        color: variables.$text-light;
 
         &:hover {
-            background: $primary-light;
+            background: variables.$primary-light;
         }
     }
 
     &-danger {
-        background: $danger;
-        color: $text-light;
+        background: variables.$danger;
+        color: variables.$text-light;
 
         &:hover {
             opacity: 0.9;
@@ -27,11 +30,11 @@
     }
 
     &-success {
-        background: $success;
-        color: $text-light;
+        background: variables.$success;
+        color: variables.$text-light;
     }
 
-    @include smooth;
+    @include mixins.smooth;
     position: relative;
     overflow: hidden;
 
